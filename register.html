@@ -1,0 +1,46 @@
+
+<html>
+    <head>
+        <title>注册页面</title>
+    </head>
+    <body style="background-color: skyblue;">
+           <center>
+               <div class="title">用户注册</div>
+               <form name="form" action="" method="post">
+                   <div class="content">
+                    <label>学号：<input type="text" name="sno" placeholder="学号" required></label><br><br>
+                    <label>姓名：<input type="text" name="sname" placeholder="姓名" required></label><br><br>
+                    <label>密码：<input  type="password" name="pwd" placeholder="密码" required><br> <br>
+                    <label>学院：<input type="text" name="depart" placeholder="学院" required></label><br><br>
+                    <label>性别：<input type="text" name="sex" placeholder="性别" required></label><br><br>
+                    <label>年龄：<input  type="text" name="age" placeholder="年龄" required><br> <br>
+                    <input  type="submit" value="注册" id="submit">
+                    <input  type="button" value="取消" onclick="reset()">
+                    <button type="button" value="登录" onclick="location='http://127.0.0.1:2000/login'">返回登录</button>
+                    </div>   
+                </form>
+            </center>
+    </body>
+    </html>
+    <script type="text/javascript">
+    </script>
+
+<style>
+    .title{
+        font-size: 30px;
+        font-family: cursive;
+        height:70px;width: 450px;
+        text-align:center; 
+        background-color: #3D8CD5;
+        margin-top: 80px;
+        padding-top: 40px;
+    }
+    .content{
+        font-size: 20px;
+        font-family: cursive;
+        height: 340px;width: 450px;
+        text-align:center; 
+        background-color: #F9F0E7;
+        padding-top: 40px;
+    }
+</style>

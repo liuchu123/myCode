@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <div class="title">更新成绩</div>
+        <form action="/admin-gradeupdate" method="post">
+            <div class="content">
+            请输入学号：<input type="text" name="sno"><br>
+            请输入学生姓名：<input type="text" name="sname" ><br>
+            请输入已有学分：<input type="text" name="havecredit" ><br>
+            请输入通过课程数：<input type="text" name="passnum"><br>
+            请输入不及格课程数：<input type="text" name="failnum"><br>
+            请输入各科平均成绩排名：<input type="text" name="avgsort" ><br>
+            <input type="submit" value="更新"><br></div>
+        </form>
+    </center>
+</body>
+</html>
+<style>
+    .title{
+        font-size: 30px;
+        font-family: cursive;
+        height:70px;width: 450px;
+        text-align:center; 
+        background-color: #3D8CD5;
+        margin-top: 160px;
+        padding-top: 40px;
+    }
+    .content{
+        font-size: 20px;
+        font-family: cursive;
+        height: 240px;width: 450px;
+        text-align:center; 
+        background-color: #F9F0E7;
+        padding-top: 40px;
+    }
+</style>

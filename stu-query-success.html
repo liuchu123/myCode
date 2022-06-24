@@ -1,0 +1,36 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <center>
+            <br><br><br><br><br><br>
+            <table border="1" align="center" class="table table-bordered">
+                <tr class="table-primary">
+                    <th>学号</th>
+                    <th>姓名</th>
+                    <th>课程号</th>
+                    <th>课程名</th>
+                    <th>考核成绩</th>
+                    <th>考试日期</th>                                   
+                </tr>
+                <% for(var i=0;i<data.length;i++){ %>
+                <tr>
+                    <td><%=data[i].sno%></td>
+                    <td><%=data[i].sname%></td>
+                    <td><%=data[i].cno%></td>
+                    <td><%=data[i].cname%></td>
+                    <td><%=data[i].examscore%></td>
+                    <td><%=data[i].examdate%></td>
+                </tr>
+                <% } %>
+            </table>
+        </center>
+    </body>
+    </html>

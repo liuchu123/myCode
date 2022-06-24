@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <center>
+        <h1>成绩列表</h1>
+        <button><a href="/admin-gradeadd">添加成绩请点击此处</a></button>
+    </center>
+    <br>
+    <table border="1" align="center" class="table table-bordered">
+        <thead>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>已有学分</th>
+            <th>通过课程数</th>
+            <th>不及格课程数</th>
+            <th>各科平均成绩排名</th>
+            <th>操作</th>
+        </thead>
+        <% for(var i=0;i<data.length;i++){ %>
+        <tr>
+            <td><%=data[i].sno%></td>
+            <td><%=data[i].sname%></td>
+            <td><%=data[i].havecredit%></td>
+            <td><%=data[i].passnum%></td>
+            <td><%=data[i].failnum%></td>
+            <td><%=data[i].avgsort%></td>
+            <td>
+                <button><a href="/updategradebysno/<%=data[i].sno%>">修改</a></button>
+    
+                <button><a href="/deletegradebysno/<%=data[i].sno%>">删除</a></button>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+
+</body>
+    <style>
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        th{
+        background-color: skyblue;
+    }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>    
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <center>
+        <h1>欢迎选课！</h1>
+        <form action="" method="post">
+        
+            <br><div class="content"></div>
+            <table border="1" align="center"  class="table table-bordered">
+                
+                <thead class="table-primary">
+                    <th>课程号</th>
+                    <th>课程名</th>
+                    <th>课程学分</th>
+                    <th>理论学时</th>
+                    <th>实践学时</th>
+                    <th>考核方式</th>
+                </thead>
+                <% for(var i=0;i<data.length;i++){ %>
+                <tr>
+                    <td><%=data[i].cno%></td>
+                    <td><%=data[i].cname%></td>
+                    <td><%=data[i].credit%></td>
+                    <td><%=data[i].therorytime%></td>
+                    <td><%=data[i].practicetime%></td>
+                    <td><%=data[i].examway%></td>
+                </tr>
+                <% } %>
+            
+            </table></div>
+            <br><br>
+            请输入你想选择的课程号：<input type="text" name="cno" placeholder="课程号"><input type="submit" value="确定">
+
+        </form>
+   </center>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>

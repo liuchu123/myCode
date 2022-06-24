@@ -1,0 +1,248 @@
+
+<html>
+    <head>
+        <title>欢迎进入学生界面</title>
+    </head>
+    <body
+    background-size:500% 200%;>
+        <div id="box">
+            <div class="top">
+                <div class="top1">
+                    <span style="font-size: 45;font-family: 宋体;margin-top:20;" >在线学生课程学习信息管理系统</span>
+                    <samp style="font-size: 40;margin-left: -35;font-family: 隶书;color:rgb(255, 51, 0)">--学生中心</samp>
+                    <!-- <div>展示用户头像
+                        <a href="#"><spa style="margin-left: 1300;font-size: 20;">用户</spa></a>
+                        &emsp;<img src="G:/web网页设计/images/04.png" width="45" height="50">
+                    </div> -->
+                </div>
+            </div>
+            <div class="top2">
+    
+            </div>
+            <div class="content">
+                <div class="wrap">
+                    <div class="header">用户菜单</div>
+                    <div class="nav">
+                        <ul>   
+                            <li class="list">
+                                <h2><i></i>账号管理</h2>
+                                <div class="hide">
+                                    <h5><a href="http://127.0.0.1:2000/login">退出登录</a></h5>
+                                </div>
+                            </li>
+
+                            <li class="list">
+                                <h2><i></i>在线选课</h2>
+                                <div class="hide">
+                                    <h5><a href="http://127.0.0.1:2000/stu-chose" target="menuFrame">进入选课</a></h5>
+                                </div>
+                            </li>
+
+                            
+                            <li class="list">
+                                <h2><i></i>查询课程</h2>
+                                <div class="hide">
+                                    <h5><a href="http://127.0.0.1:2000/stu-query-form" target="menuFrame">进入查询</a></h5> 
+                                </div>
+                            </li>
+
+                            <li class="list">
+                                <h2><i></i>学习资料</h2>
+                                <div class="hide">
+                                    <h5><a href="http://127.0.0.1:2000/stu-study" target="menuFrame">进入学习</a></h5> 
+                                    <h5><a href="http://127.0.0.1:2000/stu-answer" target="menuFrame">进入测验</a></h5>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+                <div  class="right_view"  style="background-color: skyblue;">
+                    
+                    <iframe id="menuFrame" name="menuFrame" src="" style="overflow:visible;" scrolling="yes"                         
+    
+                       frameborder="no"   width="100%" height="100%" ></iframe>
+                </div>
+            </div>
+    
+        </div>
+    
+    </body>
+    </html>
+    <style>
+
+    #item1{clear:left;}
+    ul{
+        list-style: none;
+    }
+    .top1 a{
+    
+        color: rgb(54, 52, 52);
+    }
+    a{
+        text-decoration:none;color: white;text-decoration: none;
+    }
+     a:hover{
+        color: gold;
+    }
+    
+    #box{
+        width: 1465px;height: 900;margin: 0;
+        background-color: rgb(255, 254, 253);
+    }
+    .right_view{
+        width: 1210;height: 700;float:left;background-color: rgb(227, 241, 228);opacity:0.65;margin-top:8 ;margin-left: 8;border: 1.5px solid black;
+    }
+    .top{
+        width:1465;height:140;/*background-color: rgb(213, 213, 223);*/opacity:0.9;
+    }
+    
+    .top1{height:134;background-color: rgb(253, 251, 251); border: 1px solid black;opacity: 0.6;}
+    .top1 span{
+        position: relative;
+        top:25;margin-left: 40;
+    }
+    .top1 samp{
+        position: relative;top:65;
+    }
+    .top1 spa{
+        position: relative;bottom: 10;
+    }
+    .top2{
+        width:1465;height:11;margin-top: 1;background-color: rgb(167, 176, 187);opacity:0.5;border: 0.01px solid rgb(54, 52, 52);
+    }
+    /*.top_left{width:1000;background-color: lime;}
+    .top_right{width:400;background-color: rgb(178, 86, 32);margin-left: 1000;}*/
+    .content{
+        width:1465;height:700;/*background-color: white;*/opacity:0.98;
+    }
+    .wrap{/*left*/
+            width: 240px;
+            height: 700;
+            background-color: #363a45;margin-top: 8;border: 1px solid white;float:left;margin-left: 1;/*opacity:0.5;*/
+        }
+        .header{
+            width: 100%;
+            height: 65px;
+            background-color:#44495a;
+            font-size: 24px;
+            color: #fff;
+            text-align: center;
+            line-height: 65px;
+        }
+        .nav{
+            width:240px;
+            margin: 20px 5px 20 -20;
+        }
+        
+        .list{
+            margin-bottom: 10px;height:max-content;
+        }
+    
+        .list h2{/*yijibeijign*/
+            position: relative;
+            padding: 15px 0;
+            background-color: #3889d4;
+            text-align: center;
+            font-size: 16px;
+            color: #fff;
+            transition: .5s;
+        }
+        .list h2.on{/*yijicaidanzhankaifangkuangbeijing*/
+            background-color: #1b41eb;
+        }
+        .list i{/*jiantouweizhi*/
+            position:absolute;
+            right: 20px;
+            top: 16px;
+            border: 8px solid transparent;
+            border-left-color: #fff;/*triangle*/
+            transform:rotate(0deg);
+            transform-origin: 1px 8px;
+            transition: .5s;
+        }
+        .list i.on{
+            transform:rotate(180deg);/*箭头*/
+        }
+        
+        .hide{
+            overflow-y:auto;overflow-x: hidden;
+            height: 10;
+            transition: .5s;
+        }
+        .hide::-webkit-scrollbar{
+            display:none;
+        }
+        .hide h5{
+            padding: 10px 0;
+            background-color: #282c3a;
+            text-align: center;
+            color:#fff;
+            border-bottom:#42495d;
+        }
+    </style>
+    <script>
+        
+        (function () {
+            var oList = document.querySelectorAll('.list h2'),
+                oHide = document.querySelectorAll('.hide'),
+                oIcon = document.querySelectorAll('.list i'),
+                lastIndex = 0;
+            for(var i=0;i<oList.length;i++){
+                oList[i].index = i;//自定义属性
+                oList[i].isClick = false;
+                oList[i].initHeight = oHide[i].clientHeight;
+                oHide[i].style.height = '0';
+                oList[i].onclick = function () {
+                    if(this.isClick){
+                        oHide[this.index].style.height = '0';
+                        oIcon[this.index].className = '';
+                        oList[this.index].className = '';
+                        oList[this.index].isClick = false;
+                    }
+                    else{
+                        oHide[lastIndex].style.height = '0';
+                        oIcon[lastIndex].className = '';
+                        oList[lastIndex].className = '';
+                        oHide[this.index].style.height = '220px';
+                        oIcon[this.index].className = 'on';
+                        oList[this.index].className = 'on';
+                        oList[lastIndex].isClick = false;
+                        oList[this.index].isClick = true;
+                        lastIndex = this.index;
+                    }
+                }
+            }
+        })();
+        
+        window.onload = function() {
+            var oUl1 = document.getElementById("ul1");
+            var aLi = oUl1.getElementsByTagName("li");
+            var oDiv = document.getElementById("wrap");
+            var aDiv = oDiv.getElementsByTagName("div");
+            for(var i = 0; i < aLi.length; i++) {
+                aLi[i].index = i;
+                aLi[i].onmouseover = function() {
+                    for(var i = 0; i < aLi.length; i++) {
+                        aLi[i].className = "";
+                    }
+                    this.className = "active";
+                    for(var j = 0; j < aDiv.length; j++) {
+                        aDiv[j].className = "hide";
+                    }
+                    aDiv[this.index].className = "show";
+                }        
+            }
+        }
+    
+        /*
+            $(function(){
+                $(".wrap ul li").on("click",function(){
+                    var address =$(this).attr("data-src");
+                    $("iframe").attr("src",address);
+                });
+            });*/
+        
+    </script>
+    

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <center>
+        <h1>课程列表</h1>
+        <button><a href="/admin-courseadd">添加课程请点击此处</a></button>
+    </center>
+    <br>
+    <table border="1" align="center" class="table table-bordered">
+        <thead class="table-primary">
+            <th>课程号</th>
+            <th>课程名</th>
+            <th>课程学分</th>
+            <th>理论学时</th>
+            <th>实践学时</th>
+            <th>考核方式</th>
+            <th>操作</th>
+        </thead>
+        <% for(var i=0;i<data.length;i++){ %>
+        <tr>
+            <td><%=data[i].cno%></td>
+            <td><%=data[i].cname%></td>
+            <td><%=data[i].credit%></td>
+            <td><%=data[i].therorytime%></td>
+            <td><%=data[i].practicetime%></td>
+            <td><%=data[i].examway%></td>
+            <td>
+                <button><a href="/updatebycno/<%=data[i].cno%>">修改</a></button>
+    
+                <button><a href="/deletebycno?mycno=<%=data[i].cno%>">删除</a></button>
+
+     
+            </td>
+        </tr>
+        <% } %>
+    </table>
+</body>
+</html>
+<style>
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    th{
+        background-color: skyblue;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
